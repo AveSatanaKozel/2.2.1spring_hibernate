@@ -8,6 +8,7 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @PersistenceContext
     private Long id;
 
     @Column(name = "name")
@@ -19,10 +20,12 @@ public class User {
     @Column(name = "email")
     private String email;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne
+//            (cascade = CascadeType.ALL)
     @JoinColumn(name = "car_id"
-//            , referencedColumnName = "user"
+
     )
+    @PersistenceContext
     private Car car;
 
     public User() {
