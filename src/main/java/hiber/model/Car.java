@@ -20,7 +20,6 @@ public class Car {
     @Column(name = "series")
     private int series;
 
-    @PersistenceContext
     @OneToOne
     private User user;
 

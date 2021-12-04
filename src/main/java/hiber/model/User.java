@@ -8,7 +8,7 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @PersistenceContext
+
     private Long id;
 
     @Column(name = "name")
@@ -25,7 +25,6 @@ public class User {
     @JoinColumn(name = "car_id"
 
     )
-    @PersistenceContext
     private Car car;
 
     public User() {
